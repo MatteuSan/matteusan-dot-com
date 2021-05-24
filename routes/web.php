@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+//  Redirect if / is accessed without {lang}
+Route::redirect('/', 'en');
+
+Route::group(['prefix' => '{lang}'], function() {
+
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/bio', [HomeController::class, 'index'])->name('bio');
+    Route::get('/projects', [HomeController::class, 'index'])->name('projects');
+
+});
 
