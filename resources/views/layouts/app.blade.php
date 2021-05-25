@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="nav__item">
-                    <a class="nav__item_icon {{Request::segment(2) == "bio" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('Bio') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('bio', App::getLocale()) }}">face</a>
+                    <a class="nav__item_icon {{Request::segment(2) == "bio" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('About Me') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('bio', App::getLocale()) }}">face</a>
                     <p class="nav__item_text">{{ __('About Me') }}</p>
                 </div>
 
@@ -64,7 +64,7 @@
                 </div>
 
                 <div class="nav__item nav__item--more">
-                    <a class="nav__item_icon {{ Request::segment(2) == "webdev" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('Music') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('webdev', App::getLocale()) }}">web</a>
+                    <a class="nav__item_icon {{ Request::segment(2) == "webdev" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('Web Dev') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('webdev', App::getLocale()) }}">web</a>
                     <p class="nav__item_text">{{ __('Web Dev') }}</p>
                 </div>
 

@@ -5,12 +5,12 @@
     <title>HOME - MatteuSan</title>
 
     <!-- BASIC META -->
-    <meta name="description" content="{{ __('MatteuSan\'s creative sharing platform. Here is where you can find his works in music and web development.') }}" />
+    <meta name="description" content="{{ __('Matteu\'s creative sharing platform. Here is where you can find his works in music and web development.') }}" />
     <meta>
 
     <!-- OPENGRAPH -->
     <meta property="og:title" content="{{ __('HOME') }}{{ __(' - MatteuSan') }}" />
-    <meta property="og:description" content="{{ __('MatteuSan\'s creative sharing platform. Here is where you can find his works in music and web development.') }}" />
+    <meta property="og:description" content="{{ __('Matteu\'s creative sharing platform. Here is where you can find his works in music and web development.') }}" />
 
 @endsection
 
@@ -22,13 +22,13 @@
             <h5>{{ __('I\'m a frontend developer, composer, arranger, orchestrator and music copyist') }}</h5>
 
             <div class="banner__socials">
-                <a href="https://twitter.com/InvestmentGt" target="_blank">
+                <a href="https://twitter.com/MatteuSan" target="_blank">
                     <i class="banner__icon fab fa-twitter-square"></i>
                 </a>
-                <a href="https://instagram.com/investment.gt" target="_blank">
+                <a href="https://instagram.com/matteu.hernandez" target="_blank">
                     <i class="banner__icon fab fa-instagram"></i>
                 </a>
-                <a href="https://patreon.com/growstocks" target="_blank">
+                <a href="https://patreon.com/matteusan" target="_blank">
                     <i class="banner__icon fab fa-patreon"></i>
                 </a>
             </div>
@@ -40,7 +40,7 @@
 
         <h2 class="title-bar--on-surface">{{ __('WEBSITES/WEBAPPS I\'VE BEEN WORKING ON') }}</h2>
         <div class="card--on-surface">
-            <p>{{ __('Here\'s a complete list of all the websites/webapps I\'ve been developing/developing with a few friends in my spare time and in my coding time.') }}</p>
+            <p>{{ __('Here\'s a complete list of all the websites/webapps I\'ve been developing with a few friends in my spare time and in my coding time. Most of these are passion projects, and some of them are commissions.') }}</p>
         </div>
 
         <div class="container--grid">
