@@ -21,7 +21,8 @@ Route::group(['prefix' => '{lang}'], function() {
 
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/bio', [HomeController::class, 'index'])->name('bio');
-    Route::get('/projects', [HomeController::class, 'index'])->name('projects');
+    Route::get('/music', [HomeController::class, 'index'])->name('music');
+    Route::get('/webdev', [HomeController::class, 'index'])->name('webdev');
 
 });
 

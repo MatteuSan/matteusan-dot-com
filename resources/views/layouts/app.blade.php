@@ -1,9 +1,7 @@
 <!doctype html>
 <html
     lang="{{ App::getLocale() }}"
-    x-data="{
-        drawer_open: false
-    }"
+    x-data="{}"
 >
 <head>
 
@@ -39,7 +37,7 @@
     @livewireStyles
 </head>
 
-<header x-bind:class="drawer_open === true ? 'scrolled' : ''" class="header">
+<header class="header">
 
     <div class="header__wrap">
 
@@ -54,23 +52,23 @@
             <div class="nav__container">
 
                 <div class="nav__item">
-                    <a class="nav__item_icon {{ Request::segment(2) == "" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('page.home_n') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('home', App::getLocale()) }}">home</a>
+                    <a class="nav__item_icon {{ Request::segment(2) == "" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('Home') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('home', App::getLocale()) }}">home</a>
                     <p class="nav__item_text">{{ __('Home') }}</p>
                 </div>
 
                 <div class="nav__item">
-                    <a class="nav__item_icon {{Request::segment(2) == "bio" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('page.about_n') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('bio', App::getLocale()) }}">face</a>
+                    <a class="nav__item_icon {{Request::segment(2) == "bio" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('Bio') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('bio', App::getLocale()) }}">face</a>
                     <p class="nav__item_text">{{ __('About Me') }}</p>
                 </div>
 
                 <div class="nav__item">
-                    <a class="nav__item_icon {{ Request::segment(2) == "projects" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('page.market_n') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('projects', App::getLocale()) }}">dashboard</a>
-                    <p class="nav__item_text">{{ __('Projects') }}</p>
+                    <a class="nav__item_icon {{ Request::segment(2) == "music" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('Music') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('music', App::getLocale()) }}">piano</a>
+                    <p class="nav__item_text">{{ __('Music') }}</p>
                 </div>
 
                 <div class="nav__item nav__item--more">
-                    <p @click.prevent="drawer_open = !drawer_open" class="nav__item_icon material-icons" title="{{ __('page.more_n') }}" data-mdc-ripple-is-unbounded="true" x-text="drawer_open ? 'close' : 'menu'"></p>
-                    <p class="nav__item_text">{{ __('More') }}</p>
+                    <a class="nav__item_icon {{ Request::segment(2) == "webdev" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('Music') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('webdev', App::getLocale()) }}">web</a>
+                    <p class="nav__item_text">{{ __('Web Dev') }}</p>
                 </div>
 
             </div>
@@ -80,62 +78,6 @@
     </div>
 
 </header>
-
-<div class="drawer__overlay" style="display: none" x-show.transition.opacity="drawer_open">
-
-    <div class="drawer mdc-elevation--z5" style="display: none" x-show.transition.duration.5s.origin.right="drawer_open" @click.away="drawer_open = false">
-
-        <div class="wrap--text" style="margin: 0 auto;">
-
-            <a class="drawer__item" href="#">
-                <span class="drawer__icon material-icons">lock</span>
-                <p>{{ __('Privacy Policy') }}</p>
-            </a>
-            <a class="drawer__item" href="#">
-                <span class="drawer__icon material-icons">verified_user</span>
-                <p>{{ __('Terms of Use') }}</p>
-            </a>
-
-
-            <h4 class="drawer__divider">{{ __('SOCIALS') }}</h4>
-
-            <div class="drawer__socials">
-                <a href="https://twitter.com/InvestmentGt" target="_blank">
-                    <i class="drawer__icon fab fa-twitter-square"></i>
-                </a>
-                <a href="https://instagram.com/investment.gt" target="_blank">
-                    <i class="drawer__icon fab fa-instagram"></i>
-                </a>
-                <a href="https://discord.io/growstocks" target="_blank">
-                    <i class="drawer__icon fab fa-discord"></i>
-                </a>
-                <a href="https://patreon.com/growstocks" target="_blank">
-                    <i class="drawer__icon fab fa-patreon"></i>
-                </a>
-            </div>
-
-            <h4 class="drawer__divider">{{ __('LANGUAGES') }}</h4>
-
-            <div class="drawer__language-wrap">
-
-                <x-language code="en" language="English"/>
-
-                <span class="drawer__language_spacer">|</span>
-
-                <x-language code="tl" language="Tagalog"/>
-
-                <span class="drawer__language_spacer">|</span>
-
-                <x-language code="ja" language="日本語"/>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
 
 <body>
 
@@ -149,6 +91,25 @@
     <div class="wrap--text">
         <h3>@MatteuSan</h3>
         <h5>{!! __('Copyright '. date('Y') .' &copy; MatteuSan') !!}</h5>
+    </div>
+    <div class="footer__language__wrap">
+        <x-language code="en" language="English"/>
+
+        <span class="footer__language__spacer">|</span>
+
+        <x-language code="tl" language="Tagalog"/>
+
+        <span class="footer__language__spacer">|</span>
+
+        <x-language code="ja" language="日本語"/>
+    </div>
+    <div class="footer__links">
+        <a class="footer__links__item" href="#">
+            <p>{{ __('Privacy Policy') }}</p>
+        </a>
+        <a class="footer__links__item" href="#">
+            <p>{{ __('Terms of Use') }}</p>
+        </a>
     </div>
 </footer>
 </html>

@@ -1,3 +1,3 @@
-<a href="{{ route('home', [$code]) }}" class="drawer__language {{ App::getLocale() == $code ? 'drawer__language--active' : '' }}">
+<a href="{{ route('home', [$code]) }}" class="footer__language {{ App::getLocale() == $code ? 'footer__language--active' : '' }}">
     <p>{{ $language }}</p>
 </a>

@@ -9,3 +9,8 @@
 // NOTE: for a massive success rate (Dream; 1 in 7 million moment), use !important
 // on these components.
 //
+
+u {
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-light) !important;
+}

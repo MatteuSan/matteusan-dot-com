@@ -18,8 +18,21 @@
 
     <section class="banner">
         <div class="wrap--text">
-            <h1>{{ __('WELCOME!') }}</h1>
-            <h5>{{ __('I do a lot of stuff (especially in the frontend)') }}</h5>
+            <h1>{!! __('HI! I\'M <u>MATTEU!</u>') !!} </h1>
+            <h5>{{ __('I\'m a frontend developer, composer, arranger, orchestrator and music copyist') }}</h5>
+
+            <div class="banner__socials">
+                <a href="https://twitter.com/InvestmentGt" target="_blank">
+                    <i class="banner__icon fab fa-twitter-square"></i>
+                </a>
+                <a href="https://instagram.com/investment.gt" target="_blank">
+                    <i class="banner__icon fab fa-instagram"></i>
+                </a>
+                <a href="https://patreon.com/growstocks" target="_blank">
+                    <i class="banner__icon fab fa-patreon"></i>
+                </a>
+            </div>
+
         </div>
     </section>
 
