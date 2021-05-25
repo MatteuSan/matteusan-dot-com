@@ -1,8 +1,5 @@
 <!doctype html>
-<html
-    lang="{{ App::getLocale() }}"
-    x-data="{}"
->
+<html lang="{{ App::getLocale() }}" x-data="{}">
 <head>
 
     @yield('meta')
@@ -25,9 +22,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <!-- OPENGRAPH -->
-    <meta property="og:image" content="">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="MatteuSan">
+    <meta property="og:image" content="{{ asset('img/ogphoto.png') }}" />
+    <meta property="og:url" content="{{ URL::current() }}">
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/favicon.ico') }}">

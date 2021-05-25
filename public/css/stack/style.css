@@ -364,7 +364,7 @@ body::-webkit-scrollbar-thumb:hover {
   transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out;
 }
 .nav .nav__container .nav__item .nav__item_icon:hover {
-  color: #a9adb2;
+  opacity: 0.6;
 }
 .nav .nav__container .nav__item .nav__item_text {
   font-size: 12px !important;

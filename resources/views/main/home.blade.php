@@ -5,12 +5,12 @@
     <title>HOME - MatteuSan</title>
 
     <!-- BASIC META -->
-    <meta name="description" content="The official website of the Luwal Sining-Pagganap" />
+    <meta name="description" content="{{ __('MatteuSan\'s creative sharing platform. Here is where you can find his works in music and web development.') }}" />
+    <meta>
 
     <!-- OPENGRAPH -->
-    <meta property="og:title" content="Home - Luwal Sining-Pagganap" />
-    <meta property="og:description" content="The official website of the Luwal Sining-Pagganap" />
-    <meta property="og:image" content="https://luwal-sining.xyz/img/ogphoto.png" />
+    <meta property="og:title" content="{{ __('HOME') }}{{ __(' - MatteuSan') }}" />
+    <meta property="og:description" content="{{ __('MatteuSan\'s creative sharing platform. Here is where you can find his works in music and web development.') }}" />
 
 @endsection
 
