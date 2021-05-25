@@ -27,9 +27,9 @@
     <meta property="og:url" content="{{ URL::current() }}">
 
     <!-- FAVICON -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/favicon.ico') }}">
-    <link rel="icon" type="img/png" sizes="32x32" href="{{ asset('img/favicon.ico') }}">
-    <link rel="icon" type="img/png" sizes="16x16" href="{{ asset('img/favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/favicon.png') }}">
+    <link rel="icon" type="img/png" sizes="32x32" href="{{ asset('img/favicon.png') }}">
+    <link rel="icon" type="img/png" sizes="16x16" href="{{ asset('img/favicon.png') }}">
 
     @livewireStyles
 </head>
