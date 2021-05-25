@@ -35,9 +35,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/favicon.ico') }}">
     <link rel="icon" type="img/png" sizes="32x32" href="{{ asset('img/favicon.ico') }}">
     <link rel="icon" type="img/png" sizes="16x16" href="{{ asset('img/favicon.ico') }}">
+
+    @livewireStyles
 </head>
 
-<header class="header mdc-elevation--z2">
+<header x-bind:class="drawer_open === true ? 'scrolled' : ''" class="header">
 
     <div class="header__wrap">
 
@@ -66,7 +68,7 @@
                     <p class="nav__item_text">{{ __('Projects') }}</p>
                 </div>
 
-                <div class="nav__item">
+                <div class="nav__item nav__item--more">
                     <p @click.prevent="drawer_open = !drawer_open" class="nav__item_icon material-icons" title="{{ __('page.more_n') }}" data-mdc-ripple-is-unbounded="true" x-text="drawer_open ? 'close' : 'menu'"></p>
                     <p class="nav__item_text">{{ __('More') }}</p>
                 </div>
@@ -81,18 +83,10 @@
 
 <div class="drawer__overlay" style="display: none" x-show.transition.opacity="drawer_open">
 
-    <div class="drawer mdc-elevation--z5" style="display: none" x-show.transition.origin.top.right="drawer_open" @click.away="drawer_open = false">
+    <div class="drawer mdc-elevation--z5" style="display: none" x-show.transition.duration.5s.origin.right="drawer_open" @click.away="drawer_open = false">
 
         <div class="wrap--text" style="margin: 0 auto;">
 
-            <a id="mode--dark__toggle" class="drawer__item">
-                <span id="mode--dark__icon" class="drawer__icon material-icons">dark_mode</span>
-                <p id="mode--dark__text">{{ __('Toggle Dark Mode') }}</p>
-            </a>
-            <a class="drawer__item" href="#">
-                <span class="drawer__icon material-icons">dashboard</span>
-                <p>{{ __('Dashboard') }}</p>
-            </a>
             <a class="drawer__item" href="#">
                 <span class="drawer__icon material-icons">lock</span>
                 <p>{{ __('Privacy Policy') }}</p>
@@ -147,11 +141,13 @@
 
 @yield('contents')
 
+@livewireScripts
+<script type="text/javascript" src="{{ asset('js/index.js') }}"></script>
 </body>
 
 <footer class="footer">
     <div class="wrap--text">
-        <h3>MatteuSan's Website</h3>
+        <h3>@MatteuSan</h3>
         <h5>{!! __('Copyright '. date('Y') .' &copy; MatteuSan') !!}</h5>
     </div>
 </footer>

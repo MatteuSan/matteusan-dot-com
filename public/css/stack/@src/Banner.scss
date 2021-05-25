@@ -1,11 +1,11 @@
 .banner {
-    margin-top: 47px;
-    height: 30vh;
+    height: 37vh;
     overflow-x: hidden;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 
     background: var(--banner);
 
@@ -14,7 +14,7 @@
         max-width: 1077px;
         text-align: left;
         position: absolute;
-        top: 50%;
+        top: 57%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: var(--banner-color);

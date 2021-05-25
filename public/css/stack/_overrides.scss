@@ -10,3 +10,31 @@
 // NOTE: for a massive success rate (Dream; 1 in 7 million moment), use !important
 // on these overrides.
 //
+
+.header {
+    background-color: var(--transparent) !important;
+
+    .header__text h2 {
+        font-family: 'Bebas Neue', sans-serif!important;
+        font-weight: 400!important;
+    }
+
+    &.scrolled {
+        background-color: var(--primary-dark) !important;
+        box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    }
+}
+
+.banner h1 {
+    font-family: 'Bebas Neue', sans-serif!important;
+    font-weight: 400!important;
+    font-size: 42px!important;
+}
+
+.footer {
+    h3 {
+        font-family: 'Bebas Neue', sans-serif!important;
+        font-weight: 400!important;
+        font-size: 20px!important;
+    }
+}
