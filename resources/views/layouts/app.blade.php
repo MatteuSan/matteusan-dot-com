@@ -31,6 +31,9 @@
     <link rel="icon" type="img/png" sizes="32x32" href="{{ asset('img/favicon.png') }}">
     <link rel="icon" type="img/png" sizes="16x16" href="{{ asset('img/favicon.png') }}">
 
+    <!-- ARC -->
+    <script type="application/javascript" async src="https://arc.io/widget.min.js#ghFWRTjS"></script>
+
     @livewireStyles
 </head>
 
@@ -49,23 +52,23 @@
             <div class="nav__container">
 
                 <div class="nav__item">
-                    <a class="nav__item_icon {{ Request::segment(2) == "" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('Home') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('home', App::getLocale()) }}">home</a>
+                    <a class="nav__item_icon {{ Request::segment(2) == "" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('Home') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('home', App::getLocale()) }}">face</a>
                     <p class="nav__item_text">{{ __('Home') }}</p>
                 </div>
 
                 <div class="nav__item">
-                    <a class="nav__item_icon {{Request::segment(2) == "bio" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('About Me') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('bio', App::getLocale()) }}">face</a>
-                    <p class="nav__item_text">{{ __('About Me') }}</p>
-                </div>
-
-                <div class="nav__item">
-                    <a class="nav__item_icon {{ Request::segment(2) == "music" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('Music') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('music', App::getLocale()) }}">piano</a>
+                    <a class="nav__item_icon {{ Request::segment(2) == "music" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('Music') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('music', App::getLocale()) }}">music_note</a>
                     <p class="nav__item_text">{{ __('Music') }}</p>
                 </div>
 
                 <div class="nav__item nav__item--more">
-                    <a class="nav__item_icon {{ Request::segment(2) == "webdev" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('Web Dev') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('webdev', App::getLocale()) }}">web</a>
+                    <a class="nav__item_icon {{ Request::segment(2) == "webdev" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('Web Dev') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('webdev', App::getLocale()) }}">devices</a>
                     <p class="nav__item_text">{{ __('Web Dev') }}</p>
+                </div>
+
+                <div class="nav__item">
+                    <a class="nav__item_icon {{Request::segment(2) == "resume" ? 'material-icons' : 'material-icons-outlined' }}" title="{{ __('Resume') }}" data-mdc-ripple-is-unbounded="true" href="{{ route('bio', App::getLocale()) }}">description</a>
+                    <p class="nav__item_text">{{ __('Resume') }}</p>
                 </div>
 
             </div>

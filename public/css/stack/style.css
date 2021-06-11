@@ -94,7 +94,7 @@ h6 {
   color: #fff;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 539px) {
   .nav__item_icon, .nav__item_text {
     color: #fff !important;
   }
@@ -183,7 +183,6 @@ body::-webkit-scrollbar-thumb:hover {
   width: calc(100% - 20px);
   max-width: 1077px;
   margin: 67px auto 65px auto;
-  overflow-x: hidden;
   min-height: 25vh;
 }
 .wrap--content--no-margin-top {
@@ -191,7 +190,6 @@ body::-webkit-scrollbar-thumb:hover {
   width: calc(100% - 20px);
   max-width: 1077px;
   margin: 25px auto 65px auto;
-  overflow-x: hidden;
   min-height: 25vh;
 }
 @media (min-width: 850px) {
@@ -267,6 +265,39 @@ body::-webkit-scrollbar-thumb:hover {
   flex-flow: wrap row;
   gap: 20px;
 }
+.container--flex--center {
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+
+.container--flex--true-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  height: 100%;
+  width: 100%;
+}
+
+.container--flex--row {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.container--flex--small {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap row;
+  gap: 15px;
+  margin: 10px auto;
+}
 
 .container--grid {
   grid-column: 1/-1;
@@ -291,6 +322,15 @@ body::-webkit-scrollbar-thumb:hover {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+.container--grid--input {
+  width: 100%;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr;
+  grid-gap: 0.5rem;
+  margin: 0 0 7px 0;
+  padding: 0;
+}
 
 /* HEADER (Namespace: Header__[component] */
 .header {
@@ -300,7 +340,7 @@ body::-webkit-scrollbar-thumb:hover {
   z-index: 100;
   height: 50px;
   background-color: var(--primary-dark);
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .header .header__wrap {
   display: flex;
@@ -311,6 +351,7 @@ body::-webkit-scrollbar-thumb:hover {
   left: 0;
   padding: 0.5rem 0.7rem;
   font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
 }
 @media (min-width: 850px) {
   .header .header__wrap .header__text {
@@ -671,7 +712,7 @@ body::-webkit-scrollbar-thumb:hover {
   margin-bottom: 55px;
   background-color: var(--primary);
 }
-@media (min-width: 850px) {
+@media (min-width: 540px) {
   .footer {
     margin-bottom: 0;
   }
@@ -954,14 +995,25 @@ button[data-tooltip]:hover::after {
 .card--y .card--y__img {
   border-radius: 5px 5px 0 0;
   width: 100%;
-  height: auto !important;
+  height: 120px !important;
   overflow-y: hidden;
+}
+.card--y .card--y__img img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: auto !important;
 }
 .card--y .card--y__info {
   padding: 7px;
 }
 .card--y .card--y__info .wrap--text h4 {
   font-weight: 700;
+}
+.card--y .card--y__info .wrap--text h5 {
+  height: 32px;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis !important;
 }
 .card--y .card--y__info .card--y__button {
   width: 100%;
@@ -1281,6 +1333,100 @@ button[data-tooltip]:hover::after {
   display: inline;
 }
 
+.form {
+  width: 100%;
+  max-width: 670px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0 auto 30px auto;
+  background-color: var(--primary);
+  border-radius: 0.8rem;
+  transition: all 0.2s ease;
+}
+.form:focus-within {
+  transform: scale(1.03);
+}
+.form .form__field {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+.form .form__field label {
+  width: 100%;
+  color: var(--on-primary);
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.form .form__field input, .form .form__field textarea {
+  width: 100%;
+  background-color: var(--input);
+  color: var(--on-input);
+  padding: 0.5rem 0.7rem;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  font-size: min(14px, 18px);
+  resize: none;
+}
+.form .form__field input::placeholder, .form .form__field textarea::placeholder {
+  color: var(--placeholder);
+}
+.form .form__field .error {
+  background-color: var(--error);
+  color: var(--on-error);
+  padding: 3px 5px;
+  border-radius: 3px;
+  margin: 5px 0 0 0;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+.form .form__button {
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  margin: 10px 0 0 0;
+  background-color: var(--secondary);
+  color: var(--on-secondary);
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+.form .form__button:hover, .form .form__button:focus {
+  background-color: var(--secondary-dark);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.form .form__button--no-solid {
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+  padding: 7px;
+  margin: 10px 0 0 0;
+  background-color: var(--transparent);
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+.form .form__button--no-solid:hover, .form .form__button--no-solid:focus {
+  background-color: var(--secondary);
+  color: var(--on-secondary);
+  cursor: pointer;
+}
+
+.form .form__button--delete {
+  width: 100%;
+  border: 1px solid var(--error);
+  border-radius: 5px;
+  padding: 0.5rem 0.7rem;
+  margin: 21px 0 0 0 !important;
+  background-color: var(--transparent);
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+.form .form__button--delete:hover, .form .form__button--delete:focus {
+  background-color: var(--error);
+  color: var(--on-error);
+  cursor: pointer;
+}
+
 .staff {
   width: 100%;
   margin-bottom: 10px;
@@ -1371,6 +1517,43 @@ button[data-tooltip]:hover::after {
 u {
   text-decoration: underline;
   text-decoration-color: var(--secondary-light) !important;
+}
+
+.technology__logo {
+  transition: all 0.2s ease;
+}
+.technology__logo:hover {
+  transform: scale(1.1);
+}
+
+g[class^=raphael-group-] {
+  display: none;
+}
+g[class^=raphael-group-] * {
+  display: none;
+}
+
+.raphael-group-3-parentgroup {
+  display: block !important;
+}
+.raphael-group-3-parentgroup * {
+  display: block !important;
+}
+
+.container--flex.--form {
+  max-width: 670px;
+  margin: 0 auto;
+}
+.container--flex.--form .chart {
+  position: relative;
+  width: 100%;
+  max-width: inherit;
+  margin: 0 auto;
+}
+.container--flex.--form .chart #mschart {
+  margin: 0 auto;
+  width: 100%;
+  max-width: inherit;
 }
 
 /*# sourceMappingURL=style.css.map */

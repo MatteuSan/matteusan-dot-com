@@ -158,8 +158,14 @@
     .card--y__img {
         border-radius: 5px 5px 0 0;
         width: 100%;
-        height: auto!important;
+        height: 120px!important;
         overflow-y: hidden;
+
+        img {
+            border-radius: 5px 5px 0 0;
+            width: 100%;
+            height: auto!important;
+        }
     }
 
     .card--y__info {
@@ -168,6 +174,14 @@
         .wrap--text {
             h4 {
                 font-weight: 700;
+            }
+
+            h5 {
+                height: 32px;
+                overflow: hidden;
+
+                white-space: normal;
+                text-overflow: ellipsis!important;
             }
         }
 

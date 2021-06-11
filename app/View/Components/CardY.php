@@ -7,10 +7,10 @@ use Illuminate\View\Component;
 class CardY extends Component
 {
 
-    public string $title;
-    public string $subtitle;
-    public string $image;
-    public string $to;
+    public $title;
+    public $subtitle;
+    public $image;
+    public $to;
 
     public function __construct($title, $subtitle, $image, $to)
     {

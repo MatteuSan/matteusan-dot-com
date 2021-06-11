@@ -1,6 +1,8 @@
 <div class="card--y mdc-elevation--z2">
     <a href="{{ $to }}" target="_blank">
-        <img alt="CardY image" class="card--y__img" src="{{ asset($image) }}">
+        <div class="card--y__img">
+            <img alt="CardY image" src="{{ asset($image) }}">
+        </div>
         <div class="card--y__info">
             <div class="wrap--text">
                 <h4>{{ $title }}</h4>

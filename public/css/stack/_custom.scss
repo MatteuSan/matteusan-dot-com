@@ -14,3 +14,46 @@ u {
     text-decoration: underline;
     text-decoration-color: var(--secondary-light) !important;
 }
+
+.technology__logo {
+    transition: all 0.2s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+g[class^="raphael-group-"] {
+    display: none;
+
+    * {
+        display: none;
+    }
+}
+
+.raphael-group-3-parentgroup {
+    display: block!important;
+
+    * {
+        display: block!important;
+    }
+}
+
+.container--flex.--form {
+    max-width: 670px;
+    margin: 0 auto;
+
+    .chart {
+        position: relative;
+        width: 100%;
+        max-width: inherit;
+        margin: 0 auto;
+
+        #mschart {
+            margin: 0 auto;
+            width: 100%;
+            max-width: inherit;
+        }
+    }
+}
+
